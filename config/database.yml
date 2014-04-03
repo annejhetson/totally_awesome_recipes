@@ -1,0 +1,16 @@
+
+development:
+  adapter: postgresql
+  database: totally-awesome-recipes_development
+
+test:
+  adapter: postgresql
+  database: totally-awesome-recipes_test
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: totally-awesome-recipes_production
+  pool: 5
+  username: totally-awesome-recipes
+  password:
