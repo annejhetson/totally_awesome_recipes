@@ -1,8 +1,24 @@
-<input class="form-control" id="name" name="recipe[name]" type="text" value="<%= @recipe.name %>">
-    </div>
-    <div class="form-group">
-      <textarea class="form-control" id="description" name="recipe[description]" type="text" rows="8"><%= @recipe.description %></textarea>
-    </div>
-    <div class="form-group">
-      <input class="form-control" id="picture" name="recipe[picture]" type="text" value="<%= @recipe.picture %>">
-    </div>
+<div class="form-group">
+  <input class="form-control" id="name" name="recipe[name]" type="text" placeholder="Recipe Name..." value="<%= @recipe.name %>">
+</div>
+<div class="form-group">
+  <textarea class="form-control" id="description" name="recipe[description]" type="text" placeholder="How to make me?" rows="8"><%= @recipe.description %></textarea>
+</div>
+<div class="form-group">
+  <input class="form-control" id="picture" name="recipe[picture]" type="text" placeholder="http..." value="<%= @recipe.picture %>">
+<br>
+<h3>Tag Cloud</h3>
+<hr>
+  <div class="checkbox">
+    <% @tags.each do |tag| %>
+      <label class=" btn-xs btn-default ourButton" data-toggle="checkbox" >
+        <input class="checkHide" type="checkbox" name="tag_ids[]" value="<%= tag.id %>"><%= tag.name %>
+      </label>
+
+    <%end%>
+  </div>
+<hr>
+<br>
+<button class="btn btn-primary btn-lg submit_button">Submit</button>
+
+

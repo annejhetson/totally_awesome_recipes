@@ -7,4 +7,5 @@ TotallyAwesomeRecipes::Application.routes.draw do
   match('/recipes/:id/edit', {:via => :get, :to => 'recipes#edit'})
   match('/recipes/:id/edit', {:via => [:put, :patch], :to => 'recipes#update'})
   match('/recipes/:id', {:via => :get, :to => 'recipes#show'})
+
 end

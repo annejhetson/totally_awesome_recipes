@@ -1,0 +1,42 @@
+
+ .view img{
+  padding-top: 5px;
+  width: 100%;
+ }
+ .submit_button {
+  padding-top: 20px;
+  width: 100%;
+ }
+
+ .post{
+  padding: 10px;
+  width: 200px;
+ }
+
+ .red {
+  color: red;
+ }
+
+ .checkHide {
+  display: none;
+ }
+
+ .flash{
+  padding-top: 60px;
+ }
+
+ .ourButton {
+  margin: 5px 1px;
+  width: 100px;
+ }
+
+ .post img{
+  width: 100%;
+  max-height: 600px;
+ }
+.clicked {
+  color: red;
+}
+.black{
+  color:black;
+}

@@ -4,15 +4,9 @@
   <br>
   <form role="form" acion="/recipes/<%= @recipe.id %>/edit" method="post">
     <input name="_method" type="hidden" value="patch">
-    <div class="form-group">
-      <input class="form-control" id="name" name="recipe[name]" type="text" value="<%= @recipe.name %>">
-    </div>
-    <div class="form-group">
-      <textarea class="form-control" id="description" name="recipe[description]" type="text" rows="8"><%= @recipe.description %></textarea>
-    </div>
-    <div class="form-group">
-      <input class="form-control" id="picture" name="recipe[picture]" type="text" value="<%= @recipe.picture %>">
-    </div>
-    <button class="btn btn-primary btn-lg submit_button">Submit</button>
+
+    <%= render('form') %>
+
+
   </form>
 </div>

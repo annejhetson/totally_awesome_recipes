@@ -6,11 +6,20 @@ class RecipesController < ApplicationController
 
   def new
     @recipe = Recipe.new()
+    @tags = Tag.all
     render :new
   end
 
   def create
-    Recipe.create(params[:recipe])
+    recipe = Recipe.new(params[:recipe])
+    if recipe.save
+
+      params[:tag_ids].each do |tagId|
+      Tagged_recipe.create({recipe_id: recipe.id, tag_id: tagId})
+      end
+
+      flash[:notice] = "Your awesome recipe has been saved."
+    end
     redirect_to ''
   end
 
